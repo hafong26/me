@@ -5,73 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
     <title>Nguyễn Văn Hào - Full HD</title>
     <style>
-        body {
-            overflow-x: hidden;
+        a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+            width: max-content;
+            min-width: 300px;
+            border: 2px solid #000;
+            margin: 20px auto;
+            padding: 15px;
+            font-size: 40px;
+            position: relative;
+            transition: .5s;
         }
         
-        .tkw {
-            min-height: 100vh;
-            background: linear-gradient(to bottom, pink, lime);
+        a:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(orange, violet);
+            width: 100%;
+            height: 0;
+            transition: .5s;
+            z-index: -1;
         }
         
-        .tkw h2 {
-            background: black;
+        a:hover {
             color: white;
         }
+        
+        a:hover:before {
+            height: 100%;
+        }
+        
+        @media (max-width:575.98px) {
+            a {
+                color: white;
+            }
+            a:before {
+                height: 100%;
+            }
+        }
     </style>
-    <script src="jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <div class="tkw">
-        <header>
-            <h2 class="text-center p-3">THIẾT KẾ WEB CƠ BẢN</h2>
-        </header> 
-        <div class="container">
-            <div class="row ">
-                <div class="col-12 col-xxl-6 p-3 p-xxl-5">
-                    <a class="" href="https://hafong26.github.io/ahihi/">
-                        <img class="w-100" src="ahihi.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-12 col-xxl-6 p-3 p-xxl-5">
-                    <a class="" href="https://hafong26.github.io/baitapT6/">
-                        <img class="w-100" src="baitapT6.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <a href="https://hafong26.github.io/button/index.html">Button Effect</a>
+        <a href="https://hafong26.github.io/skycoffee/">Sky Coffee</a>
+        <a href="https://hafong26.github.io/coffeeT12/">Coffee T12</a>
+        <a href="https://hafong26.github.io/cafeden/">cafeden</a>
+        <a href="https://hafong26.github.io/ahihi/">ahihhi</a>
+        <a href="https://hafong26.github.io/baitapT6/">Bài tập T6</a>
     </div>
-    <div class="tkw">
-        <header>
-            <h2 class="text-center p-3">THIẾT KẾ WEB NÂNG CAO</h2>
-        </header>
-        <div class="container">
-            <div class="row ">
-                 <div class="col-12 p-3 p-xxl-5">
-                    <a class="" href="https://hafong26.github.io/cafeden/">
-                        <img class="w-100" src="capheden.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-12 p-3 p-xxl-5">
-                    <a class="" href="https://hafong26.github.io/coffeeT12/">
-                        <img class="w-100" src="caphechua.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-12 p-3 p-xxl-5">
-                    <a class="" href="https://hafong26.github.io/skycoffee/">
-                        <img class="w-100" src="skycoffee.jpg" alt="">
-                    </a>
-                </div>
-            </div> 
-        </div>
-    </div>
-
-    <script>
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 
 </html>
