@@ -2,95 +2,475 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    <title>Nguyễn Văn Hào</title>
+    <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+    <title>Button Effect</title>
     <style>
         body {
-            font-family: 'Roboto Mono', monospace;
-            margin: 0;
+            height: 100vh;
+            position: relative;
         }
         
-        h1 {
-            text-align: center;
-            font-size: 50px;
-        }
-        
-        nav {
-            background: #000;
+        .dark {
+            background: #3c3c3c;
+            width: 100%;
+            height: 500px;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
         
-        ul {
-            color: #fff;
-            padding: 0;
-        }
-        
-        li {
-            display: inline-block;
-        }
-        
-        section {
-            display: flex;
-            width: 60%;
-            margin: auto;
-        }
-        
-        section a {
-            flex: 1;
+        a {
+            cursor: pointer;
+            position: relative;
+            padding: 0.2em 0.5em;
+            font-size: 5vw;
+            font-family: 'Road Rage', cursive;
             border: 1px solid #000;
-            margin: 15px;
+            width: max-content;
             text-align: center;
-            padding: 0 15px;
-            color: #000;
+            margin: 0.5em;
+            min-width: 400px;
+            display: block;
             text-decoration: none;
+            color: #000;
+        }
+        
+        .re {
+            position: relative;
+        }
+        
+        .ab {
+            position: absolute;
+        }
+        
+        .ab-50 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .z-1 {
+            z-index: -1;
+        }
+        
+        .w-0 {
+            width: 0;
+        }
+        
+        .h-0 {
+            height: 0;
+        }
+        
+        .w-100 {
+            width: 100%;
+        }
+        
+        .h-100 {
+            height: 100%;
+        }
+        
+        .l-0 {
+            left: 0;
+        }
+        
+        .t-0 {
+            top: 0;
+        }
+        
+        .l-100 {
+            left: 100%;
+        }
+        
+        .t-100 {
+            top: 100%;
+        }
+        
+        .tran-05 {
             transition: .5s;
         }
         
-        section a:hover {
+        .rounded {
+            border-radius: 50%;
+        }
+        
+        .of-h {
+            overflow: hidden;
+        }
+        /* Button 01 */
+        
+        .btn-01 {
+            background: none;
+        }
+        
+        .btn-01 span {
+            background: linear-gradient(to right, orange, violet);
+            transition: .5s;
+        }
+        
+        .btn-01:hover {
+            color: #fff;
+            border: 1px solid transparent;
+        }
+        
+        .btn-01:hover span {
+            height: 100%;
+        }
+        /* Button 02 */
+        
+        .btn-02 {
+            background: tomato;
+            color: #fff;
+            border: 5px solid white
+        }
+        
+        .btn-02:before,
+        .btn-02:after {
+            background: inherit;
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            transition: .5s;
+            z-index: -1;
+        }
+        
+        .btn-02:before {
+            left: -10px;
+            top: -10px;
+        }
+        
+        .btn-02:after {
+            right: -10px;
+            bottom: -10px;
+        }
+        
+        .btn-02:hover:before,
+        .btn-02:hover:after {
+            width: 100%;
+            height: 100%;
+        }
+        /* Button 03 */
+        
+        .btn-03 {
+            background: transparent;
+            overflow: hidden;
+            color: #fff;
+            border: none;
+        }
+        
+        .btn-03 span {
+            background-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+            width: 700%;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: -1;
+        }
+        
+        .btn-03:hover span {
+            animation: 4s color linear infinite;
             color: red;
-            transform: scale(1.05);
+        }
+        
+        @keyframes color {
+            0% {
+                left: 0;
+            }
+            50% {
+                left: -600%;
+            }
+            100% {
+                left: 0;
+            }
+        }
+        /* Button 04 */
+        
+        .btn-04 {
+            border: 1px solid #00f;
+            color: #00f;
+            background: transparent;
+            border-radius: 99px;
+            overflow: hidden;
+            transition: 1s;
+            position: relative;
+        }
+        
+        .btn-04:hover {
+            color: #fff;
+        }
+        
+        .btn-04 span {
+            width: 40%;
+            background: blue;
+            position: absolute;
+            height: 100%;
+            top: 100%;
+            z-index: -1;
+            border-radius: 50%;
+        }
+        
+        .btn-04 span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 200px;
+            background: inherit;
+        }
+        
+        .btn-04 span:nth-of-type(1) {
+            left: 0;
+            transition: .3s;
+        }
+        
+        .btn-04 span:nth-of-type(2) {
+            left: 25%;
+            transition: .6s;
+        }
+        
+        .btn-04 span:nth-of-type(3) {
+            left: 50%;
+            transition: .9s;
+        }
+        
+        .btn-04 span:nth-of-type(4) {
+            left: 75%;
+            transition: 1.2s;
+        }
+        
+        .btn-04:hover span {
+            top: -50%;
+        }
+        /* Button 05 */
+        
+        .btn-05 {
+            color: #fff;
+            background: transparent;
+            border: none;
+            margin: 0;
+            z-index: 1;
+        }
+        
+        .btn-05 span {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: .5s;
+            background: #000;
+            z-index: -1;
+            border: 1px solid #000;
+        }
+        
+        .btn-05:hover span {
+            background: none;
+        }
+        
+        .btn-05:hover span:nth-of-type(1) {
+            transform: rotate(45deg);
+        }
+        
+        .btn-05:hover span:nth-of-type(2) {
+            transform: rotate(-45deg);
+        }
+        /* Button 06 */
+        
+        .btn-06 {
+            border: none;
+            background: black;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .btn-06 span {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            transition: .5s;
+        }
+        
+        .btn-06 span:nth-of-type(1),
+        .btn-06 span:nth-of-type(3) {
+            width: 100%;
+        }
+        
+        .btn-06 span:nth-of-type(2),
+        .btn-06 span:nth-of-type(4) {
+            height: 100%;
+        }
+        
+        .btn-06 span:nth-of-type(1) {
+            left: -100%;
+            top: 0;
+        }
+        
+        .btn-06 span:nth-of-type(2) {
+            right: 0;
+            top: -100%;
+        }
+        
+        .btn-06 span:nth-of-type(3) {
+            bottom: 0;
+            right: -100%;
+        }
+        
+        .btn-06 span:nth-of-type(4) {
+            bottom: -100%;
+            left: 0;
+        }
+        
+        .btn-06:hover span:nth-of-type(1) {
+            left: 100%;
+        }
+        
+        .btn-06:hover span:nth-of-type(2) {
+            top: 100%;
+        }
+        
+        .btn-06:hover span:nth-of-type(3) {
+            right: 100%;
+        }
+        
+        .btn-06:hover span:nth-of-type(4) {
+            bottom: 100%;
+        }
+        /* Button 07 */
+        
+        .btn-07 {
+            border: none;
+            position: relative;
+            color: red;
+        }
+        
+        .btn-07 span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: .5s;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+        
+        .btn-07 span:nth-of-type(2) {
+            border: 1px solid red;
+        }
+        
+        .btn-07:hover span:nth-of-type(2) {
+            transform: scale(1.1, 1.3);
+            opacity: 0;
+        }
+        /* Button 08 */
+        
+        .btn-08 {
+            transition: .5s;
+            overflow: hidden;
+            color: lime;
+            border: 1px solid lime;
+        }
+        
+        .btn-08:hover {
+            color: white;
+        }
+        
+        .btn-08 span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: lime;
+            z-index: -1;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            transition: .5s;
+        }
+        
+        .btn-08:hover span {
+            width: 550px;
+            height: 550px;
+        }
+        /* Button 09 */
+        
+        .btn-09 {
+            background: red;
+        }
+        
+        .btn-09 span {
+            background: black;
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: .5s;
+        }
+        
+        .btn-09 span:nth-of-type(2) {
+            top: 50%;
+        }
+        
+        .btn-09:hover span {
+            transform: scale(1.05, 1.02);
+        }
+        
+        .btn-09:hover span:nth-of-type(1) {
+            top: -30%;
+        }
+        
+        .btn-09:hover span:nth-of-type(2) {
+            top: 80%;
+        }
+        
+        @media (max-width: 500px) {
+            div {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Nguyễn Văn Hào </h1>
-        <nav>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <a href="https://hafong26.github.io/musicplayer/">
-                <h2>Music Player</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque sunt totam nostrum vitae libero blanditiis sed assumenda quasi iure nihil mollitia autem, officia quis quia recusandae repellat maiores perferendis nemo?</p>
-            </a>
-            <a href="https://hafong26.github.io/nhakhoa/">
-                <h2>Nha Khoa</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque sunt totam nostrum vitae libero blanditiis sed assumenda quasi iure nihil mollitia autem, officia quis quia recusandae repellat maiores perferendis nemo?</p>
-            </a>
-            <a href="https://hafong26.github.io/skycoffee/">
-                <h2>Sky Coffee</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque sunt totam nostrum vitae libero blanditiis sed assumenda quasi iure nihil mollitia autem, officia quis quia recusandae repellat maiores perferendis nemo?</p>
-            </a>
-        </section>
-    </main>
+    <a class="btn-01 re tran-05" href="https://hafong26.github.io/musicplayer/">Music Player<span class="w-100 h-0 ab-50 z-1"></span></a>
+
+    <a class="btn-06" href="https://hafong26.github.io/skycoffee/">Sky Coffee
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <a class="btn-07" href="https://hafong26.github.io/nhakhoa/">Nha Khoa
+        <span></span>
+        <span></span>
+    </a>
+    <a class="btn-08">
+        Nguyễn Văn Hào<span></span>
+    </a>    
+    <a class="btn-02">Nguyễn Văn Hào</a>
+    <a class="btn-03">Nguyễn Văn Hào<span></span></a>
+    <a class="btn-04">Huỳnh Phát Huy
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+
+    <a class="btn-09">Nguyễn Văn Hào
+        <span></span>
+        <span></span>
+    </a>
+    <section class="dark">
+        <a class="btn-05">Hào
+            <span></span>
+            <span></span>
+        </a>
+    </section>
 </body>
 
 </html>
