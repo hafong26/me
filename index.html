@@ -5,75 +5,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anh em F11 | Hào đẹp trai kìa </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>thietkewebsite</title>
     <style>
         body {
-            padding: 15px;
-            background: linear-gradient(to bottom, rgb(255, 191, 73), violet);
+            background: linear-gradient(to bottom, pink, blue);
             min-height: 100vh;
             text-align: center;
-            color: white;
-            letter-spacing: 5px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 50px auto;
+            background: red;
+            animation: box 1s infinite ease;
+            border-radius: 50%;
+            overflow: hidden;
         }
 
         img {
-            width: 100px;
-            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+
         }
 
-        header {
-            padding: 50px;
+        @keyframes box {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 #fff9;
+            }
+
+            25% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                box-shadow: 0 0 0 10px #fff9;
+                transform: rotate(-70deg);
+
+            }
+
+            75% {
+                transform: rotate(0deg);
+
+            }
         }
 
-        span {
-            white-space: nowrap;
+
+
+
+
+        * {
+            color: white;
         }
 
         a {
             display: block;
-            margin: 15px auto;
-            padding: 25px 15px;
-            border: 1px solid #fff;
-            color: white;
-            width: 800px;
             text-decoration: none;
-            font-size: 23px;
+            color: white;
+            border: 1px solid white;
+            width: 500px;
+            margin: 15px auto;
+            padding: 15px;
             transition: .5s;
         }
 
-        @media (max-width:800px) {
-            a {
-                width: 100%;
-            }
-
-
-
-            header {
-                padding: 0;
-            }
+        span {
+            letter-spacing: 10px;
         }
 
         a:hover {
             background: white;
             color: black;
         }
+
+        main {
+            padding: 50px;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="zalo.jpg" alt="">
-        <h2>@hafo.ng26</h2>
+        <div class="logo">
+            <img src="zalo.jpg" alt="">
+        </div>
+        <h1>@hafo.ng26</h1>
         <span>Ông trùm của những ông trùm</span>
     </header>
     <main>
-        <a target="_blank" href="https://hafong26.github.io/musicplayer/">Music Player</a>
-        <a target="_blank" href="https://hafong26.github.io/iphone13/">Iphone 13</a>
-        <a target="_blank" href="https://hafong26.github.io/nhakhoa/">Nha Khoa</a>
-        <a hred="https://hafong26.github.io/anhyeuem/">Anh yêu em</a>
-        <a href="https://hafong26.github.io/skycoffee/">Sky Coffee</a>
-        <a href="https://hafong26.github.io/water/">Water Effect</a>
-        <a target="_blank" href="https://hafong26.github.io/chillMovie/">Chill Movie</a>
+        <a href="#">Nguyễn Văn Hào</a>
+        <a href="#">Nguyễn Văn Hào</a>
+        <a href="#">Nguyễn Văn Hào</a>
+        <a href="#">Nguyễn Văn Hào</a>
     </main>
 </body>
 
