@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <title>Water Effect</title>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size: 200px;
+            user-select: none;
+        }
+
+        body {
+            background: #2c3e50;
+            position: relative;
+            justify-content: center;
+            display: flex;
+            text-align: center;
+        }
+
+        span {
+            position: absolute;
+            text-shadow: -7px 7px 0 #34495e, -5px 5px 30px #000;
+        }
+
+        .water {
+            animation: water 3s ease-in-out infinite;
+            color: #2196F3;
+        }
+
+
+
+        @media (max-width:1000px) {
+            * {
+                font-size: 100px;
+
+            }
+        }
+
+        @keyframes water {
+
+            0%,
+            100% {
+                clip-path: polygon(0% 45%, 7% 49%, 18% 55%, 26% 60%, 34% 63%, 45% 62%, 55% 58%, 64% 52%, 74% 47%, 84% 46%, 91% 48%, 100% 52%, 100% 100%, 0% 100%);
+            }
+
+            50% {
+                clip-path: polygon(0% 45%, 10% 43%, 20% 43%, 29% 45%, 39% 51%, 48% 55%, 56% 56%, 64% 58%, 74% 58%, 82% 56%, 91% 54%, 100% 52%, 100% 100%, 0% 100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span>HAFO</span>
+    <span class="water">HAFO</span>
+</body>
+
+</html>
