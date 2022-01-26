@@ -2,7 +2,10 @@ var app = {
     typingElement: document.getElementById('typing-element'),
     info: [
         'Nguyễn Văn Hào',
-        '18 years old'
+        '18 years old',
+        'from Vietnamese',
+        'a website developer',
+        'a very handsome boy'
     ],
     speed: 70,
     indexText: 0,
