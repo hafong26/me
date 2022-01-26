@@ -61,7 +61,7 @@ header .container .nav > ul > li {
   position: relative;
   text-align: center;
   padding: 15px;
-  margin-right: 80px;
+  margin: 25px;
 }
 
 header .container .nav > ul > li a {
@@ -72,6 +72,7 @@ header .container .nav > ul > li a#login {
   background: white;
   color: black;
   padding: 10px 50px;
+  margin: 0 !important;
   border-radius: 5px;
 }
 
@@ -269,14 +270,20 @@ header .container .nav > ul > li > .menu a:hover {
   }
   header .nav > ul > li .menu {
     position: relative !important;
+    width: 100%;
     -webkit-transition: .5s !important;
     transition: .5s !important;
-    height: 0 !important;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   header .nav > ul > li:hover .menu {
-    height: -webkit-max-content !important;
-    height: -moz-max-content !important;
-    height: max-content !important;
+    background: white;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  header .nav > ul > li:hover .menu > li {
+    list-style-type: disc;
   }
   header nav.active {
     height: 100%;
@@ -286,8 +293,8 @@ header .container .nav > ul > li > .menu a:hover {
   header .btn-menu {
     display: block;
   }
-   .heroes h1 {
-    font-size: 30px !important;
+  .heroes h1 {
+    font-size: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
