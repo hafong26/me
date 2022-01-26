@@ -286,5 +286,8 @@ header .container .nav > ul > li > .menu a:hover {
   header .btn-menu {
     display: block;
   }
+   .heroes h1 {
+    font-size: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
