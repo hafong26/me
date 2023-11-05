@@ -8,6 +8,120 @@
     <title id="js-head-title">Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+.player {
+  position: relative;
+  width: 500px;
+}
+.list-render {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  display: flex;
+}
+.list-render::-webkit-scrollbar {
+  display: none;
+}
+.song__item {
+  min-width: 500px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  height: 100vh;
+  background-size: cover;
+}
+
+.song__info {
+  padding: 35px;
+  padding-bottom: 100px;
+  background: linear-gradient(180deg, #0009, #0007, #0000);
+  color: #fff;
+}
+.song__name {
+  font-size: 27px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.song__singer {
+  font-size: 17px;
+  color: #ccc;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px;
+  background-color: #fff2;
+}
+
+.progress__time {
+  color: #ddd;
+}
+
+.progress__slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: none;
+  border-radius: 999px;
+  background-color: #fffa;
+  box-shadow: 0 0 15px #fff;
+}
+
+.progress__slider:focus {
+  outline: none;
+}
+
+.progress__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 0 5px #fff;
+}
+
+.pop-up {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000a;
+
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop-up:hover {
+  cursor: pointer;
+  background-color: #0009;
+}
+
+.pop-up p {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
 
     </style>
 </head>
